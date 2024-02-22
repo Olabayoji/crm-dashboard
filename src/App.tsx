@@ -27,6 +27,7 @@ import routerBindings, {
 
 import { authProvider, dataProvider, liveProvider } from "./providers";
 import { Home, ForgotPassword, Login, Register } from "./pages";
+import Layout from "./components/layout";
 
 function App() {
   return (
@@ -50,11 +51,23 @@ function App() {
               }}
             >
               <Routes>
-                <Route index element={<WelcomePage />} />
-                <Route index element={<Home />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/forgot-password" element={<ForgotPassword />} />
+                <Route
+                  element={
+                    <Authenticated
+                      key={"authenticated-layout"}
+                      fallback={<CatchAllNavigate to="/login" />}
+                    >
+                      <Layout>
+                        <Outlet />
+                      </Layout>
+                    </Authenticated>
+                  }
+                >
+                  <Route index element={<Home />} />
+                </Route>
               </Routes>
               <RefineKbar />
               <UnsavedChangesNotifier />
@@ -67,5 +80,6 @@ function App() {
     </BrowserRouter>
   );
 }
+``;
 
 export default App;
