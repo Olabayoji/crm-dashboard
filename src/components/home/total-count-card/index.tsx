@@ -76,6 +76,7 @@ const TotalCountCard: FC<Props> = ({ loading, resource, totalCount }) => {
         style={{
           display: "flex",
           justifyContent: "space-between",
+          overflow: "hidden",
         }}
       >
         <Text
