@@ -42,6 +42,7 @@ const KanbanColumnSkeleton = ({ children }: React.PropsWithChildren) => {
           flex: 1,
           border: "2px dashed transparent",
           borderRadius: "4px",
+          height: "100%",
         }}
       >
         <div

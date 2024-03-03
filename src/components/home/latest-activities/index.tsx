@@ -41,7 +41,7 @@ const LatestActivities = () => {
   const isLoading = dealLoading || loadingAudit;
   return (
     <Card
-      styles={{ head: { padding: "16px" }, body: { padding: "0 1rem" } }}
+      styles={{ body: { padding: "0 1rem" } }}
       title={
         <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
           <UnorderedListOutlined />
@@ -84,7 +84,7 @@ const LatestActivities = () => {
                       <Text strong>{deal?.title}</Text>
                       <Text>deal</Text>
                       <Text>{item.action === "CREATE" ? "in" : "to"}</Text>
-                      <Text strong>{deal?.stage.title}</Text>
+                      <Text strong>{deal?.stage?.title}</Text>
                     </Space>
                   }
                 />

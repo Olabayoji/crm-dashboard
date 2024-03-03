@@ -7,7 +7,6 @@ import { SearchOutlined } from "@ant-design/icons";
 import {
   CreateButton,
   DeleteButton,
-  Edit,
   EditButton,
   FilterDropdown,
   List,
