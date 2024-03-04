@@ -39,7 +39,7 @@
   },
   "scripts": {
     "dev": "refine dev",
-    "build": "refine build",
+    "build": "tsc & refine build",
     "preview": "refine start",
     "refine": "refine",
     "codegen": "graphql-codegen"
