@@ -2,7 +2,6 @@ import { useForm } from "@refinedev/antd";
 import { HttpError } from "@refinedev/core";
 import { GetFields, GetVariables } from "@refinedev/nestjs-query";
 
-import MDEditor from "@uiw/react-md-editor";
 import { Button, Form, Space } from "antd";
 
 import { Task } from "@/graphql/schema.types";
@@ -11,6 +10,7 @@ import {
   UpdateTaskMutationVariables,
 } from "@/graphql/types";
 import { UPDATE_TASK_MUTATION } from "@/graphql/mutation";
+import MDEditor from "@uiw/react-md-editor";
 
 type Props = {
   initialValues: {
